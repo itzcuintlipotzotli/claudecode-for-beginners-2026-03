@@ -1,0 +1,98 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+wheels/
+sdist/
+develop-eggs/
+lib/
+lib64/
+parts/
+var/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Package managers
+Pipfile.lock
+poetry.lock
+.pdm.toml
+.pdm-python
+.pdm-build/
+__pypackages__/
+
+# Testing
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.hypothesis/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+
+# Jupyter
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# Logs
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment / secrets
+.env
+.env.*
+
+# Shell config files (should not be committed)
+.zshrc
+.zshenv
+.zprofile
+.bashrc
+.bash_profile
+.bash_logout
+.profile
+.inputrc
+
+# Claude Code local settings
+.claude/
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject.db
+.spyproject
+.ropeproject
+
+# OS
+.DS_Store
+Thumbs.db
