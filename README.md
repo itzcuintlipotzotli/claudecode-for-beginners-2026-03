@@ -27,7 +27,7 @@
 
 We'll go over two different exercises where we'll work together with Claude Code to perform programming tasks; the exercises can be carried out locally on your machine or in _GitHub Codespaces_.
 
-## Fork the Repository
+## 1. Fork the Repository
 
 You'll work on your own fork of this repository. To get started, locate the fork button at the top of the repository page, next to _Watch_ and _Star_.
 
@@ -39,7 +39,7 @@ You'll work on your own fork of this repository. To get started, locate the fork
 
 You may now browse to the new repository under your account.
 
-## Clone or Open the Repository
+## 2. Clone or Open the Repository
 
 ### Option 1 - Start Codespaces
 
@@ -59,7 +59,7 @@ Once you are on the front page of your forked repository:
 1. Click on the _Code_ green button which will open a palette.
 2. While on the _Local_ tab, _Clone_ using SSH; you may alternatively use the GitHub CLI if you have already set it up.
 
-## Installing Claude Code
+## 3. Installing Claude Code
 
 Navigate to [Install Claude Code][claude-install] and select the option that suits your platform and workstation configuration.
 
@@ -77,7 +77,7 @@ Once your codespace is up and running, install the Claude Code extension:
 2. Search for **Claude Code**.
 3. Click **Install**.
 
-# Authenticating
+## 4. Authenticating
 
 Start Claude Code by:
 
@@ -85,23 +85,6 @@ Start Claude Code by:
 - _Terminal emulator_: first make sure you are in the directory where you've cloned the repository, then run the command _claude_.
 
 Select the option to authenticate with a Claude subscription and use your account to sign in.
-
-# Claude Configuration
-
-Claude Code can be configured at two levels:
-
-- **`CLAUDE.md`** — a markdown file in your project root that Claude reads at the start of every session. Use it to capture coding conventions, build commands, and any project-specific instructions. Run `/init` to generate one automatically. See the [memory guide][cc-memory] for details.
-- **`settings.json`** — a JSON file at `.claude/settings.json` in your project (or `~/.claude/settings.json` for user-wide settings). Use it to control tool permissions and environment variables. See the [settings reference][cc-settings] for the full list of options.
-
-**Permissions** let you control which tools Claude can use without asking. Rules are defined under a `permissions` key with `allow` and `deny` lists. Deny rules block an operation outright; allow rules let Claude proceed without prompting. See the [permissions documentation][cc-permissions] for the full syntax.
-
-# Sandboxing
-
-> **Note:** This section applies only to participants running the exercises locally with the Claude CLI. GitHub Codespaces users can skip this section.
-
-Sandboxing restricts the commands Claude Code can run to a defined set of filesystem paths and network hosts, reducing the risk of unintended changes outside your working directory. Once configured, Claude works freely within those boundaries without prompting for permission on every action.
-
-Run `/sandbox` inside Claude Code to enable and configure the sandbox. On macOS it works out of the box; on Linux and WSL2 additional packages must be installed first — see the [sandboxing documentation][cc-sandboxing] for setup instructions.
 
 # Exercises
 
@@ -122,3 +105,21 @@ A companion web API where devices can report security events caught by a local a
 2. Instruct Claude to read `threat_management_app/README.md` and implement the API with tests.
 3. Review the output and iterate with follow-up prompts.
 
+# Introductory Information about Claude Code
+
+## Configuration & Permissions
+
+Claude Code can be configured at two levels:
+
+- **`CLAUDE.md`** — a markdown file in your project root that Claude reads at the start of every session. Use it to capture coding conventions, build commands, and any project-specific instructions. Run `/init` to generate one automatically. See the [memory guide][cc-memory] for details.
+- **`settings.json`** — a JSON file at `.claude/settings.json` in your project (or `~/.claude/settings.json` for user-wide settings). Use it to control tool permissions and environment variables. See the [settings reference][cc-settings] for the full list of options.
+
+**Permissions** let you control which tools Claude can use without asking. Rules are defined under a `permissions` key with `allow` and `deny` lists. Deny rules block an operation outright; allow rules let Claude proceed without prompting. See the [permissions documentation][cc-permissions] for the full syntax.
+
+## Sandboxing
+
+> **Note:** This section applies only to participants running the exercises locally with the Claude CLI. GitHub Codespaces users can skip this section.
+
+Sandboxing restricts the commands Claude Code can run to a defined set of filesystem paths and network hosts, reducing the risk of unintended changes outside your working directory. Once configured, Claude works freely within those boundaries without prompting for permission on every action.
+
+Run `/sandbox` inside Claude Code to enable and configure the sandbox. On macOS it works out of the box; on Linux and WSL2 additional packages must be installed first — see the [sandboxing documentation][cc-sandboxing] for setup instructions.
