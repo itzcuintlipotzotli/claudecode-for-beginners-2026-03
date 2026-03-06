@@ -90,20 +90,18 @@ Select the option to authenticate with a Claude subscription and use your accoun
 
 ## E1 - Refactor the Asset Management Application
 
-This is a Web API application written in Python and that uses Fast API, it supports a ficticious system used to manage hardware assets in an organisateion. The code is found under `asset_managemente_app`. We are going to refactor this application to add a couple of new features and improvements assisted with Claude Code.
+A FastAPI web application that manages hardware and software assets in an organisation. The code is under `assets_management_app`. Use Claude Code to extend it with the following:
 
-Refactoring tasks:
-1. Add a new endpoin which allows adding one or more tags to an asset.
-2. Ability to activate or deactivate an asset, remind Claude that it inactive assets should not be listed by default; for audit purposes we should now when the asset was deactivated and by who
-3. Ability to decomission an asset, this is a permanent action and we should include when the asset was decomissioned and by who
-3. Show the details of an asset by its ID, inactive and decomissioned assets can be looked up.
+1. An endpoint to add one or more tags to an asset.
+2. Activate or deactivate an asset. Inactive assets should not appear in listings by default; record when and by whom the asset was deactivated.
+3. Decommission an asset. This is a permanent action; record when and by whom it was carried out.
+4. Retrieve an asset by ID. Inactive and decommissioned assets can be looked up by ID.
 
 ## E2 - Create an Application from Scratch
 
-To complement the assets management system, we need a new Web API where assets can report all sort of security events caught by a local agent running on certain devices. The description and requirements have been documented under `threat_management_app/README.md`
+A companion web API where devices can report security events caught by a local agent. Requirements are documented in `threat_management_app/README.md`.
 
-Things to do:
-- You may change the description or requirements as you wish, for example use a different programming language / stack, functional and security requirements, etc.
-- Instruct Claude to read the description and requirements in`threat_management_app/README.md` and implement the web api as well as testing it
-- Review its work and make any adjustments you may think necessary via direct prompts to claude and follow ups.
+1. Adjust the description or requirements as needed — for example, swap the language or stack, or tweak the functional requirements.
+2. Instruct Claude to read `threat_management_app/README.md` and implement the API with tests.
+3. Review the output and iterate with follow-up prompts.
 
