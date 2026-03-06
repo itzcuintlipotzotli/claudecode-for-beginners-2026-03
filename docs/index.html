@@ -58,32 +58,42 @@
 
         <!-- Configuration -->
         <section>
-          <h2>Configuration &amp; Permissions</h2>
-          <p>Claude Code is configured at two levels:</p>
-          <ul>
-            <li><strong><code>CLAUDE.md</code></strong> — project instructions Claude reads every session: conventions, build commands, architecture notes. Run <code>/init</code> to generate one.</li>
-            <li><strong><code>.claude/settings.json</code></strong> — controls tool permissions and environment variables, per-project or user-wide.</li>
-          </ul>
-          <p><strong>Permissions</strong> use <code>allow</code> and <code>deny</code> lists to decide which tools Claude can invoke without asking first.</p>
-          <blockquote>
-            Safe configuration matters: overly permissive settings let Claude modify or delete files and push code without prompting.
-            Start restrictive and widen only what you need.
-          </blockquote>
+          <section>
+            <h2>Configuration &amp; Permissions</h2>
+            <p>Claude Code is configured at two levels:</p>
+            <ul>
+              <li><strong><code>CLAUDE.md</code></strong> — project instructions Claude reads every session: conventions, build commands, architecture notes. Run <code>/init</code> to generate one.</li>
+              <li><strong><code>.claude/settings.json</code></strong> — controls tool permissions and environment variables, per-project or user-wide.</li>
+            </ul>
+            <p><strong>Permissions</strong> use <code>allow</code> and <code>deny</code> lists to decide which tools Claude can invoke without asking first.</p>
+          </section>
+          <section>
+            <h3>Why safe configuration matters</h3>
+            <p>
+              Overly permissive settings let Claude modify or delete files and push code without prompting.
+              Start restrictive and widen only what you need.
+            </p>
+          </section>
         </section>
 
         <!-- Sandboxing -->
         <section>
-          <h2>Sandboxing</h2>
-          <p><em>Applies to participants running Claude Code locally via the CLI.</em></p>
-          <p>
-            Sandboxing restricts the commands Claude Code can run to a defined set of filesystem paths and network hosts,
-            reducing the risk of unintended changes outside your working directory.
-          </p>
-          <p>Run <code>/sandbox</code> inside Claude Code to enable it. On macOS it works out of the box; Linux and WSL2 require additional packages.</p>
-          <blockquote>
-            Without sandboxing, a misunderstood instruction could overwrite unrelated files or make unintended network calls.
-            Treat it as a safety net, especially when working with unfamiliar codebases.
-          </blockquote>
+          <section>
+            <h2>Sandboxing</h2>
+            <p><em>Applies to participants running Claude Code locally via the CLI.</em></p>
+            <p>
+              Sandboxing restricts the commands Claude Code can run to a defined set of filesystem paths and network hosts,
+              reducing the risk of unintended changes outside your working directory.
+            </p>
+            <p>Run <code>/sandbox</code> inside Claude Code to enable it. On macOS it works out of the box; Linux and WSL2 require additional packages.</p>
+          </section>
+          <section>
+            <h3>Why sandboxing matters</h3>
+            <p>
+              Without sandboxing, a misunderstood instruction could overwrite unrelated files or make unintended network calls.
+              Treat it as a safety net, especially when working with unfamiliar codebases.
+            </p>
+          </section>
         </section>
 
         <!-- Skills and plugins -->
